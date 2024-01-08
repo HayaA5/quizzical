@@ -45,7 +45,8 @@ export default function Questions() {
             <img src={sun} className='sun' />
             <div className='all-questions'>
                 {questions?.map(question => <Question questionInfo={question}
-                    updateSelectedAnswer={updateSelectedAnswer} answerSpec={answers.filter(answer => answer.question === question.question)[0]?.selectedAnswer} answers={answers} checked={checked} />)}
+                    updateSelectedAnswer={updateSelectedAnswer}
+                    answerSpec={answers.filter(answer => answer.question === question.question)[0]?.selectedAnswer} checked={checked} />)}
             </div>
             {checked ?
                 <div className='score'>
